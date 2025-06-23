@@ -1,7 +1,7 @@
 FROM ghcr.io/cirruslabs/android-sdk:33
 
 RUN apt update && apt install -y ruby-full unzip git curl && \
-    gem install sinatra rubyzip zip
+    gem install sinatra rubyzip zip rackup puma
 
 WORKDIR /app
 COPY . /app
