@@ -7,4 +7,4 @@ WORKDIR /app
 COPY . /app
 
 EXPOSE 4567
-CMD ["ruby", "main.rb", "-o", "0.0.0.0"]
+CMD ["ruby", "main.rb"]

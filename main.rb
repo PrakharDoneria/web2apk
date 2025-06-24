@@ -7,6 +7,10 @@ require "fileutils"
 require "./compile.rb"
 require "./upload.rb"
 
+set :bind, '0.0.0.0'
+set :port, ENV['PORT'] || 4567
+set :protection, except: :host_authorization
+
 get "/" do
   "@by Aquiles Trindade (trindadedev)"
 end
