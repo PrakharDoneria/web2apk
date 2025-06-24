@@ -19,7 +19,7 @@ POST https://web2apk.onrender.com/to_apk
 - Body:  
   ```json
   {
-    "file": "<URL to your zipped Android project>",
+    "file": "<URL to your zipped html, css, js project>",
     "app_name": "My App",                  // (Optional) New app name
     "package_name": "com.example.myapp",   // (Optional) New package name
     "version": "1.2.3",                    // (Optional) New version name
@@ -63,7 +63,7 @@ curl -X POST https://web2apk.onrender.com/to_apk \
 ```json
 {
   "status": "ok",
-  "result": "https://web2apk.onrender.com/downloads/your-app-1234.apk"
+  "result": "<URL for apk"
 }
 ```
 
@@ -80,9 +80,7 @@ If there is an error (e.g., invalid ZIP or build failure):
 
 ## Notes
 
-- The `file` parameter must be a URL to a ZIP file containing an Android project structured for building with Gradle.
-- If you don't provide optional fields, the original values in your project will be used.
+- The `file` parameter must be a URL to a ZIP file containing an HTML, CSS, JS project structured for building with Gradle.
 - The custom icon must be a PNG file and will replace all `ic_launcher.png` icons in the project.
 - The server will clean up temporary files after each build.
-
 ---

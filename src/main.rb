@@ -5,8 +5,8 @@ require "zip"
 require "fileutils"
 require "nokogiri" # For XML handling, add 'nokogiri' gem to your dependencies
 
-require "./compile.rb"
-require "./upload.rb"
+require "./src/compile.rb"
+require "./src/upload.rb"
 
 set :bind, '0.0.0.0'
 set :port, ENV['PORT'] || 4567
